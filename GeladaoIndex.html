@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geladão & Cia</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <main class="conteudo"> 
+    <div class="row mt-3">
+    <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold';">Bem vindo ao Geladão & Cia!</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col">
+                <h2>Cadastro de Produtos</h2>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <!-- Essa div para inserir imagem -->
+            <div class="col-4"> 
+                <img src="Imagens/produto.png" alt="produto" class="img-produto">
+            </div>
+
+            <div class="col-8">
+                <form method="GET" action="Controle/salvar.php">
+         <!-- Criando Div para um formulario, onde poderar cadastrar os produtos -->
+                    <div class="mt-3 form-floating">
+                        <input type="number" class="form-control Desabilitado " id="Codigo_Produto" readonly>
+                        <label for="Codigo_Produto" class="form-label">Codigo do Produto</label>
+                    </div> 
+
+                    <div class="mt-3 form-floating">
+                        <input type="text" class="form-control" id="Produto" name="Produto">
+                        <label for="Produto" class="form-label"> Nome do Produto</label>
+                    </div>
+                    
+                    <div class="mt-3 form-floating">
+                        <input type="text" class="form-control" id="Descricao" name="Descricao">
+                        <label for="Descricao" class="form-label"> Descrição</label>
+                    </div> 
+
+                    <div class="mt-3 form-floating">
+                        <input type="text" class="form-control" id="Valor" name="Valor">
+                        <label for="Valor" class="form-label"> Valor do Produto</label>
+                    </div> 
+                    
+                    <div class="mt-3 form-floating">
+
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-primary form-control butaoNovo">
+                                 Novo
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-success form-control botaoSalvar">
+                                Salvar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <h2> Produtos Cadastrados </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <img src="Imagens/estoque.png" alt="estoque" class="img-estoque">
+        <div class="col">
+            <table class="table table-light table-hover">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome do Produto</th>
+                        <th>Valor</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</main> 
+</body>
+</html>
