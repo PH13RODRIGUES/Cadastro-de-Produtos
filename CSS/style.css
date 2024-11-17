@@ -40,3 +40,11 @@ flex-direction: row;
     width: 40%;
     height: 25%;
 }
+
+.img-Entrega{
+    height: 100%;  /* Garante que o corpo ocupe toda a altura da página */
+  margin: 0;     /* Remove as margens padrão */
+  display: flex; /* Usando flexbox para centralização */
+  justify-content: center; /* Alinha a imagem horizontalmente */
+  align-items: center;
+}
