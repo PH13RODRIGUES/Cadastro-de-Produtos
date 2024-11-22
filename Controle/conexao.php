@@ -1,11 +1,12 @@
 <?php
-include_once "config.php";
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "Geladao";
 
-$link = mysqli_connect($servidor, $usuario, $senha, $banco);
+$link = mysqli_connect($host, $user, $password, $database);
 
-if(!link) {
-    echo "Falha ao Conectar !";
-    exit;   
-}   
-
+if (!$link) {
+    die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
+}
 ?>

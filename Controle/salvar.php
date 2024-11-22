@@ -1,19 +1,24 @@
 <?php
-include_once "conexao.php";
+include_once __DIR__ . "/conexao.php";
 
-$Codigo_Produto = filter_input(INPUT_GET,"Codigo_Produto", FILTER_SANITIZE_SPECIAL_CHARS);
-$Produto = filter_input(INPUT_GET,"Produto", FILTER_SANITIZE_SPECIAL_CHARS);
-$Descricao = filter_input(INPUT_GET,"Descricao", FILTER_SANITIZE_SPECIAL_CHARS);
-$Valor = filter_input(INPUT_GET,"Valor", FILTER_SANITIZE_SPECIAL_CHARS);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $produto = $_POST['Produto'];
+    $valor = $_POST['Valor'];
+    $descricao = $_POST['Descricao'];
 
-$sql= "INSERT INTO Cadastro_Produto VALUES (null, $Produto, $Valor )";
+    $sql = "INSERT INTO Cadastro_Produto (Produto, Valor, Descricao) VALUES ('$produto', '$valor', '$descricao')";
 
-$inserir = mysqli_query($link, $sql);
-
-if($inserir){
-    echo "Salvo com sucesso!";
-} else{
-    echo "Erro ao salvar";
+    if (mysqli_query($link, $sql)) {
+        echo "Produto cadastrado com sucesso!";
+    } else {
+        echo "Erro ao cadastrar o produto: " . mysqli_error($link);
+    }
 }
-mysqli_close(); 
 ?>
+<Div class="col-8">
+
+<button type="button" class="btn btn-info">
+<a href="../GeladaoIndex.php">Voltar</a>
+</button>
+
+</Div>
